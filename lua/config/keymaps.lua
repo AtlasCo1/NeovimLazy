@@ -19,8 +19,7 @@ vim.keymap.set("n", "<leader>fg", function()
   LazyVim.pick("live_grep", { cwd = "~/notes" })()
 end, { desc = "[F]ind [G]rep Notes" })
 
---[=[
--- Reference Jumping within same file MarkDown format
+-- Reference Jumping within same file MarkDown format - needs work on it.. very imp but no errors in file
 vim.keymap.set("n", "gl", function()
   -- 1. Get the exact text inside the brackets/parentheses under the cursor
   local target = vim.fn.expand("<cfile>")
@@ -36,4 +35,3 @@ vim.keymap.set("n", "gl", function()
     print("Could not find reference: " .. target)
   end
 end, { buffer = true, desc = "Jump to internal link reference" })
---]=]
